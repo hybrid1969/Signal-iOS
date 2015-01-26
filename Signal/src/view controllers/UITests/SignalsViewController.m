@@ -217,6 +217,7 @@ static NSString* const kShowSignupFlowSegue = @"showSignupFlow";
         MessagesViewController * vc    = [segue destinationViewController];
         NSIndexPath *selectedIndexPath = [self.tableView indexPathForSelectedRow];
         TSThread *thread               = [self threadForIndexPath:selectedIndexPath];
+        [self selectedInbox:self];
         
         if (self.contactIdentifierFromCompose){
             [vc setupWithTSIdentifier:self.contactIdentifierFromCompose];
